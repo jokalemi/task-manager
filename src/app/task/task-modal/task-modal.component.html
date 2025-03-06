@@ -1,0 +1,42 @@
+<div class="modal-body">
+  <form [formGroup]="taskForm" (ngSubmit)="onSave()">
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        id="title"
+        class="form-control"
+        formControlName="title"
+        placeholder="Título"
+      />
+      <label for="title" class="form-label">Título</label>
+    </div>
+    <div class="form-floating mb-3">
+      <textarea
+        id="description"
+        class="form-control"
+        formControlName="description"
+        placeholder="Descripción"
+        rows="3"
+      ></textarea>
+      <label for="description" class="form-label">Descripción</label>
+    </div>
+    <div class="mb-3">
+      <label for="status" class="form-label">Estado</label>
+      <select id="status" class="form-control" formControlName="status">
+        <option *ngFor="let status of statusOptions" [value]="status.value">
+          {{ status.label }}
+        </option>
+      </select>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="activeModal.close()"
+      >
+        Cancelar
+      </button>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+  </form>
+</div>
