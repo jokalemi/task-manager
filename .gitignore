@@ -1,0 +1,44 @@
+# Angular build output
+/dist
+/tmp
+/out-tsc
+
+# NPM package files
+/node_modules
+
+# IDE configuration files
+/.idea
+/.vscode
+*.swp
+*.swo
+
+# Compiled JavaScript files
+*.js
+*.js.map
+
+# Test coverage
+/coverage
+
+# Production build
+/build
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment files (si tienes archivos específicos de entorno)
+src/environments/*.ts
+
+# npm log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm
+
+# Angular CLI
+.angular
+
+# TSLint
+tslint.json
